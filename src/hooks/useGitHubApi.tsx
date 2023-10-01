@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Octokit } from "octokit";
 import { githubUser } from "../types/types";
 
 const useGitHubApi = () => {
+  const apiKey = import.meta.env.VITE_API_KEY;
+
   const [githubUser, setGithubUser] = useState<githubUser>({
     name: "",
     username: "",
@@ -16,7 +18,6 @@ const useGitHubApi = () => {
     profile_url: "",
     avatar_url: "",
     created_at: "",
-    
   });
   const [isUserFound, setIsUserFound] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -24,7 +25,7 @@ const useGitHubApi = () => {
     try {
       setIsLoading(true);
       const octokit = new Octokit({
-        auth: "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",
+        auth: apiKey,
       });
       const data = await octokit.request("GET /users/{username}", {
         username: username,
@@ -32,7 +33,7 @@ const useGitHubApi = () => {
           "X-GitHub-Api-Version": "2022-11-28",
         },
       });
-       console.log(data);
+      console.log(data);
       const githubUserData: githubUser = {
         name: data.data.name as string,
         username: data.data.login,
