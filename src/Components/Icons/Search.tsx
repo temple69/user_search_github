@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Search = () => {
   return (
     <svg
@@ -17,6 +15,6 @@ const Search = () => {
       />
     </svg>
   );
-}
+};
 
-export default Search
+export default Search;
