@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Space+Grotesk&family=Space+Mono&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Mono", monospace;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --primary-light-color: #0079ff;
+  --secondary-light-color: #697c9a;
+  --tertiary-light-color: #4b6a9b;
+  --advance-light-color: #2b3442;
+  --advance2-light-color: #f6f8ff;
+  --advance3-light-color: #fefefe;
+  --primary-dark-color: #0079ff;
+  --secondary-dark-color: #ffffff;
+  --tertiary-dark-color: #141d2f;
+  --advance-dark-color: #1e2a47;
+}
+.shadow_custom {
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+a {
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
