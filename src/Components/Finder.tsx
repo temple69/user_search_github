@@ -30,10 +30,10 @@ const Finder = () => {
     const username = inputRef.current?.value;
     if (username) {
       getGithubUser(username);
-      inputRef.current!.value = "";
     } else {
       alert("Please enter a username");
     }
+    inputRef.current!.value = "";
   };
   //Destructuring githubUser object
   const {
@@ -158,7 +158,7 @@ const Finder = () => {
               </p>
             )}
             <button
-              className={`bg-[#0079FF] text-white text-[0.875rem] md:text-base font-bold rounded-[0.625rem]  h-[2.5rem] md:h-[3.125rem]`}
+              className={`bg-[#0079FF] text-white text-[0.875rem] md:text-base font-bold rounded-[0.625rem]  h-[2.5rem] md:h-[3.125rem] px-3`}
             >
               Search
             </button>
